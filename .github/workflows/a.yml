@@ -24,19 +24,6 @@ jobs:
       - name: Start Docker Compose
         run: docker-compose up -d
 
-
-      - name: Wait for ngrok endpoint
-        uses: WyriHaximus/github-action-wait-for-status@master
-        with:
-          host: localhost
-          port: 22
-          timeout: 300s
-
-      - name: Get ngrok endpoint
-        run: |
-          echo "Ngrok endpoint: $(curl -s localhost:22/api/tunnels | jq -r .tunnels[0].public_url)"
-
-
       - name: Run Infinity Loop
         run: |
           i=1
