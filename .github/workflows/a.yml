@@ -26,7 +26,7 @@ jobs:
 
 
       - name: Wait for ngrok endpoint
-        uses: appleboy/wait-for-action@master
+        uses: WyriHaximus/github-action-wait-for-status@master
         with:
           host: localhost
           port: 22
