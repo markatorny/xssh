@@ -23,25 +23,11 @@ jobs:
 
       - name: Start Docker Compose
         run: docker-compose up -d
-      - name: Loop for 6 hours
-      run: |
-        #!/bin/bash
 
-        start_time=$(date +%s)
-        end_time=$((start_time + 6*60*60))
-
-        while true
-        do
-          current_time=$(date +%s)
-
-          if [[ $current_time -ge $end_time ]]
-          then
-            echo "Loop completed"
-            break
-          fi
-
-          echo "Looping..."
-          sleep 60
-        done
-
-        
+      - name: Run Infinity Loop
+        run: |
+          i=1
+          while [ $i -gt 0 ]; do
+            sleep 1h
+          done
+        timeout-minutes: 360
