@@ -1,4 +1,4 @@
-name: Build and Run xssh Docker Image
+name: VPS-Debian
 
 on:
   push:
