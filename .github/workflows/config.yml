@@ -35,5 +35,3 @@ jobs:
             sleep 1h
           done
         timeout-minutes: 360
-        
-        
