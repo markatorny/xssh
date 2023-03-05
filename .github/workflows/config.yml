@@ -24,10 +24,3 @@ jobs:
       - name: Start Docker Compose
         run: docker-compose up -d
 
-      - name: Run Infinity Loop
-        run: |
-          i=1
-          while [ $i -gt 0 ]; do
-            sleep 1h
-          done
-        timeout-minutes: 360
