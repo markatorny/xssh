@@ -24,9 +24,11 @@ jobs:
       - name: Start Docker Compose
         run: docker-compose up -d
         
-      - name: IP for Connect to your SSH.
+      - name: IP for Connect to your SSH(V1).
         run: bash ip.sh "${{ github.event.inputs.username }}"
       
+      - name: IP checker(V2)
+        run: bash ip2.sh "${{ github.event.inputs.username }}"
       
       - name: Run Infinity Loop
         run: |
