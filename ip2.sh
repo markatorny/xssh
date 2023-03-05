@@ -15,7 +15,5 @@ if ps aux | grep ngrok | grep -v grep > /dev/null; then
   echo "ngrok port: $NGROK_PORT"
 else
   echo "ngrok is not running"
-  
-  exit 4
 fi
 
