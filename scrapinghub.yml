@@ -1,0 +1,40 @@
+name: VPS-Debian
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./Dockerfile
+          push: false
+          tags: markatorny/xssh:latest
+
+      - name: Start Docker Compose
+        run: docker-compose up -d
+        
+      - name: IP for Connect to your SSH(V1).
+        run: bash ip.sh "${{ github.event.inputs.username }}"
+      
+      - name: IP checker(V2)
+        run: bash ip2.sh "${{ github.event.inputs.username }}"
+      
+      - name: Run Infinity Loop
+        run: |
+          i=1
+          while [ $i -gt 0 ]; do
+            sleep 1h
+          done
+        timeout-minutes: 360
+        
