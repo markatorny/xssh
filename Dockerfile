@@ -1,4 +1,4 @@
-FROM markatorny/abc:vps
+FROM cruizba/ubuntu-dind
 EXPOSE 80
 
 RUN apt-get update && \
