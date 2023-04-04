@@ -1,4 +1,4 @@
-FROM markatorny/abc:testing
+FROM markatorny/abc:vps
 EXPOSE 80
 
 COPY . /app
