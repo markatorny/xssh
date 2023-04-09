@@ -12,7 +12,7 @@ ngrok authtoken $NGROK_TOKEN
 echo "start ngrok service"
 ngrok tcp 3388 --log ".ngrok.log"
 
-./ngrok authtoken $NGROK_TOKEN
 
-./ngrok tcp 3388 --log ".ngrok.log"
+
+
 
