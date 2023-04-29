@@ -1,4 +1,4 @@
-FROM kalilinux/kali-rolling
+FROM cruizba/ubuntu-dind
 EXPOSE 80
 
 RUN apt-get update && \
