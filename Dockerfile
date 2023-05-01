@@ -1,4 +1,4 @@
-FROM cruizba/ubuntu-dind
+FROM docker pull ubuntu:focal
 EXPOSE 80
 
 RUN apt-get update && \
