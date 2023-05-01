@@ -1,4 +1,4 @@
-FROM docker pull ubuntu:focal
+FROM ubuntu:focal
 EXPOSE 80
 
 RUN apt-get update && \
