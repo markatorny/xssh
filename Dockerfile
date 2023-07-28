@@ -1,5 +1,5 @@
-FROM cruizba/ubuntu-dind
-EXPOSE 80
+FROM qeeqbox/parrot:1.0
+EXPOSE 6080
 
 RUN apt-get update && \
     apt-get install -y git && \
