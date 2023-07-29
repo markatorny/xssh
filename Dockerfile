@@ -1,5 +1,5 @@
 FROM parrotsec/security
-EXPOSE 4000
+EXPOSE 3000
 
 RUN apt-get update && \
     apt-get install -y git && \
