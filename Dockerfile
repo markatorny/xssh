@@ -1,4 +1,4 @@
-FROM qeeqbox/parrot:1.0
+FROM parrotsec/security
 EXPOSE 6080
 
 RUN apt-get update && \
