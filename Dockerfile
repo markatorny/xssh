@@ -1,4 +1,4 @@
-FROM parrotsec/security
+FROM ubuntu:20.04
 EXPOSE 3000
 
 RUN apt-get update && \
