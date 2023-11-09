@@ -1,5 +1,5 @@
-FROM ubuntu:20.04
-EXPOSE 3000
+FROM qeeqbox/parrot:1.0
+EXPOSE 6080
 
 RUN apt-get update && \
     apt-get install -y git && \
